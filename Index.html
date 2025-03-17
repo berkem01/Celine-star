@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hallo Celine!</title>
+  <style>
+    /* Grundlayout */
+    body {
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    .message {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.2em;
+      margin-top: 0.5em;
+      line-height: 1.5;
+    }
+    .insider {
+      font-style: italic;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .star {
+      font-size: 2.5em;
+      animation: float 3s ease-in-out infinite;
+      margin-top: 20px;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff6f61;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #ff3b2e;
+    }
+    /* Overlay mit pinker Dekoration und Bild */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #overlay img {
+      max-width: 80%;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);
+    }
+    #overlay .close-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff6f61;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #overlay .close-btn:hover {
+      background-color: #ff3b2e;
+    }
+    /* Extra pinke Dekoration */
+    .decorations {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h1>Privet Celine!</h1>
+    <p>Goldlöckchen, du bist die Beste, unglaublich!</p>
+    <p class="insider">Delicious! Warum lächelst du dein Handy so an? Benimm dich.</p>
+    <p>Genieße diesen Moment – eine Erinnerung, dass du Wasser trinken sollst und dass dieser Stern dich symbolisiert, weil du immer so strahlst, wenn du mich anschaust.</p>
+    <div class="star">⭐</div>
+    <button class="btn" onclick="showOverlay()">Drück mich!</button>
+    <br><br>
+    <a class="btn" href="video.html">Weiter zu "Prinzessin Celine!"</a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay">
+    <div class="decorations">💖✨</div>
+    <!-- Ersetze den src-Link mit dem tatsächlichen Bild -->
+    <img src="https://via.placeholder.com/300x400.png?text=Dein+Bild" alt="Celine">
+    <button class="close-btn" onclick="hideOverlay()">Schließen</button>
+  </div>
+
+  <script>
+    function showOverlay() {
+      document.getElementById('overlay').style.display = 'flex';
+    }
+    function hideOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
